@@ -27,12 +27,12 @@ export default async function handler(req, res) {
 
     // ✅ Send the email
     await transporter.sendMail({
-      from: `"Nicket Events" <${process.env.EMAIL_USER}>`,
+      from: `"NICKET VIP" <${process.env.EMAIL_USER}>`,
       to: email,
-      subject: `🎟️ Event Registration Confirmation: ${eventValue}`,
+      subject: `🎟️WIN Free VIP Ticket to: ${eventValue}`,
       html: `
         <h3>Hi ${name},</h3>
-        <p>Thanks for registering for <strong>${eventValue}</strong>.</p>
+        <p>Thanks participating in our games, your chance to win a VIP Ticket to <strong>${eventValue}</strong> is closer than you think, Watch Drawa on our YT Live.</p>
         <p><strong>Phone:</strong> ${phone}<br/>
            <strong>Selected Numbers:</strong> ${selectedNumbers.join(", ")}<br/>
            <strong>Total:</strong> ₦${Number(totalValue).toLocaleString()}</p>
